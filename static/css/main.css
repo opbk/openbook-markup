@@ -1,5 +1,5 @@
 body {
-	font-size: 12px;	
+	font-size: 13px;	
 	color: #333333;
 	line-height: 19px;
 }
@@ -15,8 +15,57 @@ body {
 	border: none !important;
 }
 
+.btn-danger {
+	background: #f15c22;
+	border-color: #f15c22;
+}
+
+.btn-danger:hover {
+	background: ##A84018;
+	border-color: ##A84018;
+}
+
+.btn-warning {
+	background: #777;
+	border-color: #777;
+}
+
+.btn-warning:hover {
+	background: #535353;
+	border-color: #535353;
+}
+
+.slick-prev {
+	background: url("../img/scroller_btn_sprite_new.png") no-repeat -3px 0 !important;	
+	width: 30px !important;
+	height: 110px !important;
+	top: 40px !important;
+	left: -7px !important;
+}
+
+.slick-prev:before {
+	content: "" !important;
+}
+
+.slick-next {
+	background: url("../img/scroller_btn_sprite_new.png") no-repeat 0 -330px !important;
+	width: 39px !important;
+	height: 110px !important;
+	top: 40px !important;
+	right: -1px !important;
+}
+
+.slick-next:before {
+	content: "" !important;
+}
+
+.slick-disabled {
+	background: transparent !important;
+	cursor: none !important;
+}
+
 .header {
-	margin: 15px 0 50px 0;
+	margin: 10px 0 30px 0;
 }
 
 .header a {
@@ -31,7 +80,7 @@ body {
 	padding: 0 5px !important;
 	margin: 28px 10px 0 0;
 	font-weight: bold;
-	font-size: 120%;
+	font-size: 115%;
 	color: #555;
 }
 
@@ -47,6 +96,7 @@ body {
 	padding-top: 10px;
 	padding-bottom: 50px;
 	border-right: 1px solid #dddddd;
+	font-size: 95%;
 }
 
 .sidebar .nav .nav {
@@ -70,6 +120,10 @@ body {
 	color: #999999;
 }
 
+.border-bottom {
+	border-bottom: 1px solid #dddddd;
+}
+
 .catalog {
 	padding-top: 5px;
 	min-height: 500px
@@ -77,7 +131,6 @@ body {
 
 .crumb {
 	padding: 10px 0 20px 0;
-	border-bottom: 1px solid #dddddd;
 	margin: 0 15px 0 15px;
 }
 
@@ -98,7 +151,6 @@ body {
 
 .result {
 	padding: 10px 0 20px 0;
-	border-bottom: 1px solid #dddddd;
 	margin: 0 15px 0 15px;
 }
 
@@ -115,17 +167,89 @@ body {
 
 .result .title {
 	margin: 0;
-	padding: 0 0 6px 0;
+	padding: 0 0 10px 0;
 	font-weight: bold;
 	font-size: 115%;
 }
 
 .result .buttons {
-	margin-right: 10px;
+	margin: -35px 10px 0 0;
 }
 
 .result .buttons>a {
 	font-weight: bold;
+}
+
+.book .full-cover {
+	position: relative;
+	width: 228px;
+	text-align: center;
+	margin-right: 10px
+}
+
+.book {
+	/*font-size: 115%;*/
+}
+
+.book .meta {
+	padding-left: 30px;
+}
+
+.book .meta h3 {
+	margin: 0 0 15px 0 !important;
+	font-weight: bold;
+}
+
+.book .meta .description {
+	margin-top: 20px;
+}
+
+.book .price-panel {
+	width: 238px;
+	background: #f1f1f1;
+	padding: 19px 9px;
+}
+
+.book .price-panel .btn {
+	width: 200px;
+	height: 45px;
+	padding: 11px 0 0 0;
+}
+
+.book .price-panel .price-box {
+	margin-bottom: 15px;
+}
+
+.book .price-panel .membership-box {
+	margin-top: 5px;
+}
+
+.book .price-panel .membership-box ul {
+	text-align: left;
+	margin-top: 5px;
+	padding-left: 24px;
+}
+
+.book .price-panel .membership-box li {
+	margin-bottom: 5px;
+}
+
+.book .price-panel .separator {
+	margin: 15px 0;
+}
+
+.review .cover img {
+	margin: 0 !important;
+}
+
+.review h3 {
+	padding-bottom: 10px;
+	font-size: 125%;
+	font-weight: bold;
+}
+
+.review .description {
+	margin-top: 20px;	
 }
 
 .footer {

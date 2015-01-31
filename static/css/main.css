@@ -308,6 +308,10 @@ body {
 	margin-left: 15px;
 }
 
+.signup .text-danger {
+	margin: 5px 0;
+}
+
 .info {
 	font-size: 14px;
 }

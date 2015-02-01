@@ -113,7 +113,7 @@ body {
 }
 
 .content {
-	margin-bottom: 115px;
+	margin-bottom: 130px;
 }
 
 .sidebar {
@@ -231,6 +231,7 @@ body {
 .book .price-panel {
 	background: #f1f1f1;
 	padding: 19px 9px;
+	width: 239px;
 }
 
 .book .price-panel .btn {
@@ -309,7 +310,47 @@ body {
 }
 
 .signup .text-danger {
-	margin: 5px 0;
+	margin: 5px 0 0 0;
+}
+
+.order h4 {
+	border-bottom: 1px solid #dddddd;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.order td {
+	border: 0px !important;
+}
+
+.order ul {
+	padding-left: 30px;
+	list-style-type: none;
+}
+
+.order ul label {
+	font-weight: normal;
+}
+
+.order-book .cover {
+	width: 110px;
+}
+
+.order-book .title {
+	vertical-align: middle;
+	font-size: 110%;
+}
+
+.order-shiping {
+	margin-bottom: 20px;
+}
+
+.order-membership {
+	margin-bottom: 40px;
+}
+
+.order-membership p {
+	margin: 10px 0 0 10px;
 }
 
 .info {

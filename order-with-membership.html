@@ -22,7 +22,7 @@
 	<script src="static/js/angular/slick.min.js"></script>
 
 	<script src="static/js/app/app.js"></script>
-	<script src="static/js/app/controller/signup.js"></script>
+	<script src="static/js/app/controller/order.js"></script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,45 +62,55 @@
 				</div>
 			</div>
 		</div>
-		<div class="content">
-			<form class="signup" ng-controller="SignUpController" method="post" action="/signup">
-				<div class="row">
-					<div class="col-xs-12 form-inline email-form">
-						<h3>Вход в библиотеку</h3>
-						<div class="form-group">
-							<label for="email" class="control-label">Укажите ваш email адрес&nbsp;</label>
-							<input type="email" class="form-control input-sm" id="email" name="email" placeholder="Email адрес" ng-model="form.email" required/>
-						</div>
-						<p class="text-danger" ng-init="form.error.email = 'Тут будет сообщение об ошибке'">{{ form.error.email }}</p>
-					</div>
+		<div class="content order">
+			<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+			<script src="static/js/ymap.js"></script>
+			<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"/>
+
+			<div class="row order-book">
+				<div class="col-xs-12">
+					<h4>Выбранная книга</h4>
+					<table class="table">
+						<tr>
+							<td><img src="http://opbook.org:8089/upload/cover/preview/5.jpg" class="cover"></td>
+							<td class="title">
+								<a href="#">Factory Man: How One Furniture Maker Battled Offshoring, Stayed Local - and Helped Save an American Town</a>
+							</td>
+						</tr>
+					</table>
 				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<h3>У вас уже есть библиотечная карточка?</h3>
-						<fieldset class="form-horizontal">
-							<fieldset class="form-inline">
-								<div class="form-group">
-									<label class="radio-inline control-label">
-										<input type="radio" name="new" value="false" ng-model="form.new">Да, мой пароль:&nbsp;
-									</label>
-									<input type="password" class="form-control input-sm" id="password" name="password" placeholder="Пароль" ng-model="form.password"/>
-								</div>
-							</fieldset>
-							<div class="form-group">
-								<label class="radio-inline">
-									<input type="radio" name="new" value="true" ng-model="form.new">Нет, я новый пользователь
-								</label>
-							</div>
-						</fieldset>
-						<p class="text-danger" ng-init="form.error.password = 'Тут будет сообщение об ошибке'">{{ form.error.password }}</p>
-					</div>
+			</div>
+			<div class="row order-shiping">
+				<div class="col-xs-12">
+					<h4>Доставка</h4>
+					<ul>
+						<li>
+							<label class="radio">
+								<input type="radio" name="address" value="0" checked>Самовывоз по адресу: г. Москва, ул. Лизюкова 13, офис 101. <a class="fancybox" href="#map-container">Посмотреть на карте</a>
+							</label>
+						</li>
+						<li>
+							<label class="radio">
+								<input type="radio" name="address" value="1">1-й Смоленский переулок, 7, <i>при приезде позвнонить на телефон</i>
+							</label>
+						</li>
+						<li><a href="#">Добавить новый адрес доставки</a></li>
+					</ul>
 				</div>
-				<div class="row">
-					<div class="col-xs-offset-4 col-xs-5 form-inline submit-form">
-						<input type="submit" class="btn btn-danger" value="Войти в библиотеку" ng-click="submit($event)"> 
-					</div>
+			</div>
+			<div class="row order-membership">
+				<div class="col-xs-12">
+					<h4>Информация о подписке</h4>
+					<p>Премиальная подписка с бесплатной доставкой. Действительна до 31.11.2015</p>
 				</div>
-			</form>
+			</div>
+			<div class="row order-submit">
+				<div class="col-xs-offset-4 col-xs-5 form-inline">
+					<input type="submit" class="btn btn-danger" value="Я хочу взять выбранную книгу"> 
+				</div>
+			</div>
+			<div id="map-container" style="width:700px; height:600px; display: none;"></div>
 		</div>
 	</div>
 	<div class="footer">

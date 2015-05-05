@@ -313,14 +313,21 @@ body {
 	margin: 5px 0 0 0;
 }
 
-.order h4 {
+.history h4 {
 	border-bottom: 1px solid #dddddd;
-	margin: 0;
+	margin-bottom: 10px;
 	padding: 10px 0;
 }
 
-.order td {
-	border: 0px !important;
+.history h4>.glyphicon {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.order h4 {
+	border-bottom: 1px solid #dddddd;
+	margin-bottom: 10px;
+	padding: 10px 0;
 }
 
 .order ul {
@@ -332,33 +339,39 @@ body {
 	font-weight: normal;
 }
 
+.order-book {
+	margin-bottom: 20px;
+}
+
 .order-book .cover {
 	width: 110px;
 }
 
 .order-book .title {
+	margin: 0;
+	padding: 0 0 10px 0;
+	font-weight: bold;
 	font-size: 110%;
 }
 
-.order-book .status {
-	white-space: nowrap;
-	font-weight: bold;
-	text-align: center
-}
-
-.order-book td {
-	vertical-align: middle !important;
-}
-
 .order-shiping {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
-.order-membership {
+.order-shiping label {
+	font-weight: normal !important;
+}
+
+.order-shiping .glyphicon {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.order-subscription {
 	margin-bottom: 40px;
 }
 
-.order-membership p {
+.order-subscription p {
 	margin: 10px 0 0 10px;
 }
 
